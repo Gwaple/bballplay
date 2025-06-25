@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2-Player Basketball Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🏀 2-Player Basketball Game</h1>
+  
+  <div id="authArea">
+    <div id="loginBox">
+      <h2>Login</h2>
+      <input id="loginUser" placeholder="Username"><br>
+      <input id="loginPass" type="password" placeholder="Password"><br>
+      <button onclick="login()">Login</button>
+      <button onclick="showRegister()">Register</button>
+      <div id="loginMsg"></div>
+    </div>
+    <div id="registerBox" style="display:none;">
+      <h2>Create Account</h2>
+      <input id="regUser" placeholder="Username"><br>
+      <input id="regPass" type="password" placeholder="Password"><br>
+      <button onclick="register()">Register</button>
+      <button onclick="showLogin()">Back to Login</button>
+      <div id="registerMsg"></div>
+    </div>
+  </div>
+  
+  <div id="gameArea" style="display:none;">
+    <canvas id="gameCanvas" width="900" height="500"></canvas>
+    <div>
+      <p>
+        <b>Player 1:</b> A/D to move, W to jump, Space to shoot<br>
+        <b>Player 2:</b> Left/Right to move, Up to jump, Enter to shoot
+      </p>
+      <button onclick="restartGame()">Restart</button>
+      <button onclick="saveProgress()">Save Progress</button>
+      <button onclick="loadProgress()">Load Progress</button>
+      <button onclick="logout()">Logout</button>
+      <span id="saveStatus"></span>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
